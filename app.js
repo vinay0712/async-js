@@ -117,16 +117,16 @@
 // new Promise((resolve,reject)=>{
 //     resolve();
 // })//resolve and reject are two call backs which will bve executed when the call is resolved or rejected
-// const fakeReq = (url) =>{
-//     return new Promise((resolve,reject)=>{
-//         const rand = Math.random();
-//         setTimeout(()=>{
-//             if(rand > 0.7){
-//                 reject(`your req is rejected`);
-//             }resolve(`your req is fulfilled`);
-//         },1000)
-//     })
-// }
+const fakeReq = (url) =>{
+    return new Promise((resolve,reject)=>{
+        const rand = Math.random();
+        setTimeout(()=>{
+            if(rand > 0.7){
+                reject(`your req is rejected`);
+            }resolve(`your req is fulfilled`);
+        },1000)
+    })
+}
 // fakeReq('pexels.com/new/')
 // .then((data)=>{
 //     console.log('it worked',data);//then callback will work when the promise is fullfilled
